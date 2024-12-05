@@ -29,7 +29,7 @@ p {
 }
 
 a:active, a:hover {
-    color: rgb(37, 37, 37)
+    color: rgb(216, 216, 216)
 }
 
 
@@ -37,9 +37,8 @@ a:active, a:hover {
 header {
   position: sticky;
   top: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   z-index: 99;
-  border-bottom: 1px solid black;
 }
 
 header .desktop {
@@ -53,11 +52,10 @@ header .desktop {
 .logo {
   display: flex;
   align-items: center;
-  max-height: 64px;
 }
 
 .logo p span {
-  color: rgb(124, 124, 124);
+  color: rgb(155, 155, 155);
 }
 
 .logo p {
@@ -65,15 +63,14 @@ header .desktop {
 }
 
 .logo img {
-  height: 60px;
-  padding-top: 8px;
+  height: 50px;
+  width: auto;
 }
 
 nav a {
-  padding-right: 24px;
+  padding-right: 16px;
   text-decoration: none;
-  color: rgb(74, 74, 74);
-  font-weight: bold;
+  color: black;
 }
 
 nav a:last-child {
@@ -131,12 +128,10 @@ nav a:last-child {
 }
 
 .newsfeed {
+  border-left: 1px solid;
   border-color: rgb(216, 216, 216);
-  margin: 32px;
-}
-
-.newsfeeddesk {
-  border-color: rgb(216, 216, 216);
+  padding-top: 16px;
+  padding-bottom: 32px;
 }
 
 .info {
@@ -177,4 +172,202 @@ nav a:last-child {
 
 .info a:hover {
     color: blue;
+}
+
+.learning {
+  background-color: rgb(216, 216, 216);
+  padding: 0px 72px 32px 72px;
+}
+
+.section-headline {
+  padding: 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px;
+}
+
+.categories {
+  background-color: white;
+  transition: 0.3s ease-in;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.categories:hover {
+    transition: 0.3s ease-out;
+    transform: scale(1.05);
+}
+
+.course-Description {
+  display: inline-block;
+  padding: 16px 16px 24px 16px;
+}
+
+.course-Description p {
+  margin: 8px 0 0 0;
+}
+.course-Description h3 {
+  margin-top: 0;
+}
+
+.categories img {
+  height: auto;
+  width: 100%;
+}
+
+.thesis .newsfeed {
+  border: none;
+}
+
+
+.thesis .introduction {
+  padding: 0px 0px 32px 24px;
+}
+
+.thesis .newsfeed {
+  padding-top: 0px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(216, 216, 216);
+  padding: 16px 24px 64px 16px;
+  align-items: start;
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 0px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(74, 74, 74);
+}
+
+footer a:first-child {
+  padding-right: 16px;
+}
+
+@media only screen and (max-width: 480px) {
+  header .desktop,.desktop {
+    display: none;
+  }
+
+  nav.mobile {
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  img.mobile {
+    display: inline-block;
+    object-fit: contain;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  nav.mobile a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .hero {
+    display: block;
+    padding: 0;
+  }
+
+  .hero .headline h1{
+    margin: 0;
+  }
+
+  .hero .headline p {
+    margin-top: 32px;
+  }
+
+  .hero .headline {
+    padding: 32px 16px;
+  }
+
+  .hero button {
+    background-color: rgb(155, 155, 155);
+    font-weight: 500;
+  }
+
+  .information {
+    display: block;
+  }
+
+
+  .newsfeed {
+    border: none;
+    padding-bottom: 16px;
+  }
+
+  .info {
+    padding: 16px;
+    display: block;
+    overflow: hidden;
+    border: none;
+  }
+
+  .learning {
+    padding: 32px 16px;
+    background-color: rgb(245, 244, 245);
+  }
+
+  .learning h2 {
+    padding-top: 0;
+  }
+
+  div.mobile {
+    display: block;
+  }
+
+  div.mobile h3 {
+    background-color: rgb(216, 216, 216);
+    padding: 16px 16px 24px 16px;
+    margin:0 0 8px 0;
+    border-radius: 2px;
+
+  }
+
+  div.mobile a {
+    text-decoration: none;
+    color: rgb(74, 74, 74);
+    margin: 0;
+  }
+
+  .thesis .introduction {
+    padding: 0;
+  }
+
+  .thesis .section-headline {
+    padding-bottom: 16px;
+  }
+  .thesis {
+    margin-bottom: 24px;
+  }
+
+  footer {
+    padding: 0;
+    border: none;
+  }
+
+  footer p {
+    padding: 16px;
+  }
+
 }
